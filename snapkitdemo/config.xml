@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.fundayfactory.snapkitdemo" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Snapkit Demo</name>
+    <description>
+    </description>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+        <meta-data android:name="com.snapchat.kit.sdk.clientId" android:value="b68e354e-05d9-46d7-85a9-032202b8511c" />
+        <meta-data android:name="com.snapchat.kit.sdk.redirectUrl" android:value="snapkitdemo://snap-kit/oauth2" />
+        <meta-data android:name="com.snapchat.kit.sdk.scopes" android:resource="@array/snap_connect_scopes" />
+
+        <activity android:name="com.snapchat.kit.sdk.SnapKitActivity" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="snapkitdemo"
+                    android:host="snap-kit"
+                    android:path="/oauth2"
+                    />
+            </intent-filter>
+        </activity>
+    </config-file>
+
+    <preference name="AndroidXEnabled" value="true" />
+    <resource-file src="res/values/arrays.xml" target="app/src/main/res/values/arrays.xml" />
+    </platform>
+    
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>

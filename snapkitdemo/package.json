@@ -1,0 +1,38 @@
+{
+  "name": "com.fundayfactory.colortogether",
+  "displayName": "ColorTogether",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "download": "node ./node_scripts/download-pc-build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^9.1.0",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "cordova-snapkit-plugin": "git+https://github.com/christianthomsenff/cordova-snapkit-plugin.git"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-snapkit-plugin": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.5",
+    "fs": "0.0.1-security",
+    "node-fetch": "^2.6.1",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}
