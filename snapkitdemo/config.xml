@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.fundayfactory.snapkitdemo" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.snapchat.kit.creativesample" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Snapkit Demo</name>
     <description>
     </description>
@@ -11,6 +11,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    
     <platform name="android">
         <allow-intent href="market:*" />
 
@@ -31,10 +32,16 @@
                     />
             </intent-filter>
         </activity>
+
+        <provider android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
+        </provider>
     </config-file>
 
     <preference name="AndroidXEnabled" value="true" />
+
     <resource-file src="res/values/arrays.xml" target="app/src/main/res/values/arrays.xml" />
+    <resource-file src="res/xml/file_paths.xml" target="app/src/main/res/xml/file_paths.xml" />
     </platform>
     
     <platform name="ios">
