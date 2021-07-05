@@ -1,8 +1,8 @@
 {
-  "name": "com.fundayfactory.colortogether",
-  "displayName": "ColorTogether",
+  "name": "com.fundayfactory.snapkitdemo",
+  "displayName": "Snapkit Demo",
   "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "description": "A demo app showing how to use cordova-plugin-snapkit",
   "main": "index.js",
   "scripts": {
     "download": "node ./node_scripts/download-pc-build",
@@ -11,7 +11,7 @@
   "keywords": [
     "ecosystem:cordova"
   ],
-  "author": "Apache Cordova Team",
+  "author": "Christian Thomsen",
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^9.1.0",
